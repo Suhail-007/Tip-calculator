@@ -1,0 +1,106 @@
+:root {
+		--bg: #fff;
+}
+
+* {
+		box-sizing: border-box;
+}
+
+body {
+		margin: 0;
+		font-family: Times New Roman;
+		background: whitesmoke;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100vw;
+}
+
+.container > div {
+		background: var(--bg);
+		position: relative;
+}
+
+h1 {
+		font-size: 8vw;
+		padding: 1vw 2vw;
+		text-align: center;
+		box-shadow: inset 1px 0px 5px 0px #fff, inset 0px 1px 5px 0px #ffffff, inset -1px 0px 50px 1px rgba(0,0,0,0.3), inset 0px -1px 5px 0px #fff, 1px 0px 5px 3px #fff, 0px 1px 5px 0px #fff, -1px 0px 5px 3px rgba(0,0,0,0.3), 0px -1px 0px 3px #fff;
+}
+
+.tip-div {
+		padding: 1vw 5vw;
+}
+
+.tip-div form > div > label {
+		font-size: 4vw;
+		margin-right: 1em;
+}
+
+.tip-div form > div > label + input {
+		width: 60%;
+		font-size: 3vw;
+		padding-left: 1em;
+}
+
+.tip-div form > div > label + input[placeholder] {
+		font-size: 4vw;
+}
+
+.tip-div form > div > label + input[placeholder] + span {
+		display: inline-block;
+		background: green;
+		color: white;
+		width: 6%;
+		height: 10%;
+		font-size: 4.5vw;
+		border-radius:100%;
+		text-align: center;
+}
+
+.tip-selector {
+		margin-top: 2em;
+		display: flex;
+		justify-content: flex-start;
+		font-size: 3vw;		
+}
+
+.tip-selector > label + input[type="range"] {
+		width: 75%;
+		height: 20%;
+		cursor: pointer;
+}
+
+.tip-selector > label + input[type="range"] + span {
+		background: royalblue;
+		text-align: center;
+		color: white;
+		font-size: 4vw;
+		border-radius: 0 3vw 3vw 0;
+	padding: .5vw 2vw;
+}
+
+.result-div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		font-size: 4vw;
+		opacity: 0;
+		pointer-events: none;
+		transition: transform 300ms ease-in-out,
+		opacity 300ms ease-in-out;
+		transform: translateY(-15vw);
+		padding: 4vw;
+}
+
+/* class which will be added by js */
+
+.change {
+		opacity: 1;
+		pointer-events: all;
+		height: 100%;
+		transform: translateY(0);
+}
